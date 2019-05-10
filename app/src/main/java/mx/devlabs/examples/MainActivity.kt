@@ -4,11 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.content.Context.MODE_PRIVATE
-import android.database.sqlite.SQLiteDatabase
 import android.util.Log
-import java.util.*
-import java.util.prefs.Preferences
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         db.execSQL("""CREATE TABLE IF NOT EXISTS $COMPANY_TABLE (
                  $NAME TEXT NOT NULL,
                  $DESCRIPTION TEXT)""")
-        // do sometning with cursors
 
         val values = ContentValues()
         //values.put(ID, UUID.randomUUID().toString())
@@ -50,7 +45,6 @@ class MainActivity : AppCompatActivity() {
             Log.i("DL", "${c.getString(1)}")
             Log.i("DL", "${c.getString(2)}")
         }
-
 
         c.close()
         db.close()
