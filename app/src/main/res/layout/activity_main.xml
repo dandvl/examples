@@ -6,4 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="mx.devlabs.examples.FragmentOne"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <fragment
+        android:id="@+id/fragment_two"
+        android:name="mx.devlabs.examples.FragmentTwo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
 </android.support.constraint.ConstraintLayout>
